@@ -4,215 +4,273 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yulia Careers | Canadian Resume Strategy & Career Positioning</title>
-    <meta name="description" content="Yulia Careers provides resume strategy, career positioning, interview preparation, and job search support for professionals, newcomers, students, and career changers in Canada." />
-    <meta name="keywords" content="Canadian resume writer, resume strategy Canada, career consultant Canada, job search support Canada, interview preparation, newcomer resume support, career positioning, resume assessment" />
-    <link rel="canonical" href="https://YuliaCareers.ca/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Yulia Careers | Canadian Resume Strategy & Career Positioning" />
-    <meta property="og:description" content="Founder-led career strategy and resume positioning support for the Canadian job market." />
-    <meta property="og:url" content="https://YuliaCareers.ca/" />
-    <meta property="og:site_name" content="Yulia Careers" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Yulia Careers | Canadian Resume Strategy & Career Positioning" />
-    <meta name="twitter:description" content="Practical resume strategy, interview preparation, and job search support across Canada." />
+    <meta
+      name="description"
+      content="Yulia Careers provides resume strategy, career positioning, interview preparation, and job search support for newcomers, professionals, students, career changers, and families in Canada."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: '#0A2540',
+              teal: '#14B8A6',
+              warmgray: '#F8FAFC',
+              accent: '#E8DCC8'
+            },
+            fontFamily: {
+              serif: ['Playfair Display', 'Georgia', 'serif'],
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+            },
+            boxShadow: {
+              soft: '0 14px 34px rgba(10,37,64,0.12)'
+            }
+          }
+        }
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"ProfessionalService","name":"Yulia Careers","description":"Canadian resume strategy, career positioning, interview preparation, and job search consulting.","url":"https://YuliaCareers.ca/","email":"hire.me.now.resumes@gmail.com","areaServed":"Canada","founder":{"@type":"Person","name":"Yulia Cher"},"sameAs":["https://www.facebook.com/hire.me.now.resumes/"]}
-    </script>
-    <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is Yulia Careers?","acceptedAnswer":{"@type":"Answer","text":"Yulia Careers is a founder-led Canadian career strategy service focused on resume positioning, interview preparation, and practical job search guidance."}},{"@type":"Question","name":"Who is this service for?","acceptedAnswer":{"@type":"Answer","text":"Yulia Careers supports newcomers, international students, career changers, and experienced professionals who need practical, strategic support."}},{"@type":"Question","name":"Do you offer resume writing in Toronto?","acceptedAnswer":{"@type":"Answer","text":"Yes. Services are available for Toronto clients and delivered remotely across Canada."}},{"@type":"Question","name":"Do you work remotely across Canada?","acceptedAnswer":{"@type":"Answer","text":"Yes. Consultations and support are available virtually across Canada."}},{"@type":"Question","name":"Do you help newcomers to Canada?","acceptedAnswer":{"@type":"Answer","text":"Yes. Newcomers are a core client group, with support focused on Canadian market positioning."}},{"@type":"Question","name":"What happens after I contact you?","acceptedAnswer":{"@type":"Answer","text":"You receive a response to align on goals, discuss fit, and choose a practical next step."}}]}
-    </script>
+    <style>
+      .fade-in { opacity: 0; transform: translateY(20px); transition: all .65s ease; }
+      .fade-in.show { opacity: 1; transform: translateY(0); }
+      .shape::before, .shape::after { content: ''; position: absolute; border-radius: 9999px; z-index: 0; }
+      .shape::before { width: 380px; height: 380px; background: radial-gradient(circle, rgba(20,184,166,.16), transparent 65%); top: -120px; right: -120px; }
+      .shape::after { width: 260px; height: 260px; background: radial-gradient(circle, rgba(232,220,200,.45), transparent 70%); bottom: -100px; left: -80px; }
+    </style>
   </head>
-  <body>
-    <header class="site-header">
-      <div class="container nav-row">
-        <a class="brand" href="index.html">Yulia Careers</a>
-        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
-        <nav class="nav-links" aria-label="Main navigation">
-          <a href="index.html">Home</a>
-          <a href="#free-assessment">Free Assessment</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <a class="btn btn-primary" href="INSERT_CALENDLY_LINK_HERE">Book a Free Call</a>
+  <body class="bg-white text-slate-700 font-sans antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#home" class="font-serif text-2xl font-bold text-navy">Yulia Careers</a>
+        <button id="menuBtn" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation" class="rounded-md border border-slate-300 px-3 py-1.5 text-slate-700 md:hidden">☰</button>
+        <nav id="menu" class="hidden items-center gap-6 md:flex" aria-label="Main navigation">
+          <a href="#home" class="hover:text-navy">Home</a>
+          <a href="#services" class="hover:text-navy">Services</a>
+          <a href="#about" class="hover:text-navy">About</a>
+          <a href="#resources" class="hover:text-navy">Resources</a>
+          <a href="#free-assessment" class="hover:text-navy">Free Assessment</a>
+          <a href="mailto:hire.me.now.resumes@gmail.com?subject=Discovery%20Call%20Request" class="rounded-full bg-navy px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5">Book a Free Call</a>
         </nav>
       </div>
+      <nav id="mobileMenu" class="hidden border-t border-slate-200 bg-white px-4 py-3 md:hidden">
+        <div class="flex flex-col gap-3">
+          <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#resources">Resources</a><a href="#free-assessment">Free Assessment</a>
+          <a href="mailto:hire.me.now.resumes@gmail.com?subject=Discovery%20Call%20Request" class="rounded-full bg-navy px-4 py-2 text-center text-sm font-semibold text-white">Book a Free Call</a>
+        </div>
+      </nav>
     </header>
 
-    <main>
-      <section class="hero-premium">
-        <div class="container hero-grid">
-          <div>
-            <span class="kicker">Canadian Career Strategy & Resume Positioning</span>
-            <h1>Your Experience Is Valuable. Your Resume Needs to Show It.</h1>
-            <p class="lead">Yulia Careers helps professionals, newcomers, students, and career changers clarify their direction, strengthen their positioning, and communicate their value to Canadian employers.</p>
-            <div class="cta-row">
-              <a class="btn btn-primary" href="https://chatgpt.com/g/g-69837c187f908191bc90bdf0c90849b5-career-positioning-diagnostic-by-hire-me-now" target="_blank" rel="noopener noreferrer">Start Free Assessment</a>
-              <a class="btn btn-secondary" href="INSERT_CALENDLY_LINK_HERE">Book a Free 20-Minute Call</a>
+    <main id="home">
+      <section class="shape relative overflow-hidden bg-gradient-to-b from-warmgray to-white py-20 sm:py-28">
+        <div class="relative z-10 mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div class="fade-in">
+            <p class="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-teal">Calm Professional Confidence</p>
+            <h1 class="font-serif text-4xl leading-tight text-navy sm:text-5xl">Not Getting Interviews in Canada?</h1>
+            <p class="mt-5 text-lg">Your experience may be strong, but your resume may not be communicating your value clearly to Canadian employers.</p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="https://chatgpt.com/g/g-69837c187f908191bc90bdf0c90849b5-career-positioning-diagnostic-by-hire-me-now" target="_blank" rel="noopener noreferrer" class="rounded-full bg-navy px-6 py-3 font-semibold text-white shadow-soft transition hover:-translate-y-0.5">Start Free Resume Assessment</a>
+              <a href="mailto:hire.me.now.resumes@gmail.com?subject=Discovery%20Call%20Request" class="rounded-full border border-slate-300 bg-white px-6 py-3 font-semibold text-navy transition hover:-translate-y-0.5">Book a Discovery Call</a>
             </div>
-            <p class="microcopy">No pressure. No generic templates. Clear guidance for your next step.</p>
+            <p class="mt-4 text-sm text-slate-500">No pressure. No generic templates. Clear guidance for your next step.</p>
           </div>
-
-          <aside class="snapshot-card" aria-label="Resume Positioning Snapshot">
-            <h3>Resume Positioning Snapshot</h3>
-            <p>Quick indicators of what Canadian employers may see first.</p>
-            <div class="status-list">
-              <div class="status-item"><span>Target clarity</span><span class="status-pill needs">Needs clarity</span></div>
-              <div class="status-item"><span>Value message</span><span class="status-pill dev">Developing</span></div>
-              <div class="status-item"><span>Achievement strength</span><span class="status-pill dev">Developing</span></div>
-              <div class="status-item"><span>Canadian market fit</span><span class="status-pill strong">Strong</span></div>
+          <aside class="fade-in rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+            <h2 class="font-serif text-2xl text-navy">Resume Positioning Snapshot</h2>
+            <div class="mt-5 space-y-3 text-sm">
+              <div class="flex items-center justify-between rounded-lg bg-slate-50 p-3"><span>Target clarity</span><span class="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-700">Needs clarity</span></div>
+              <div class="flex items-center justify-between rounded-lg bg-slate-50 p-3"><span>Value message</span><span class="rounded-full bg-sky-100 px-2.5 py-1 text-xs font-semibold text-sky-700">Developing</span></div>
+              <div class="flex items-center justify-between rounded-lg bg-slate-50 p-3"><span>Achievement strength</span><span class="rounded-full bg-sky-100 px-2.5 py-1 text-xs font-semibold text-sky-700">Developing</span></div>
+              <div class="flex items-center justify-between rounded-lg bg-slate-50 p-3"><span>Canadian market fit</span><span class="rounded-full bg-emerald-100 px-2.5 py-1 text-xs font-semibold text-emerald-700">Strong</span></div>
             </div>
           </aside>
         </div>
-
-        <div class="container trust-bar">
-          <span>15+ Years in Employment Services</span>
-          <span>Certified Resume Strategist</span>
-          <span>Canadian Labour Market Insight</span>
-          <span>Resume, Interview &amp; Job Search Support</span>
+        <div class="relative z-10 mx-auto mt-10 grid max-w-6xl gap-3 rounded-xl bg-navy px-4 py-4 text-sm font-medium text-slate-100 sm:grid-cols-2 lg:grid-cols-4 sm:px-6 lg:px-8">
+          <span>Toronto-based</span><span>15+ years experience</span><span>Certified Resume Strategist</span><span>Canadian labour market focus</span>
         </div>
       </section>
 
-      <section class="section section-cream" id="free-assessment">
-        <div class="container">
-          <span class="kicker">Free Career Tool</span>
-          <h2>Free Resume Positioning Assessment</h2>
-          <p class="lead">Upload or paste your resume and receive a consultation-style review of how your experience may be interpreted by Canadian employers.</p>
-          <div class="grid grid-4">
-            <article class="card"><h3>Recruiter Interpretation</h3><p>Understand how hiring managers may initially read your profile and fit.</p></article>
-            <article class="card"><h3>Positioning Gaps</h3><p>See where role direction, level, or value proposition is unclear.</p></article>
-            <article class="card"><h3>Achievement Clarity</h3><p>Identify where results and impact are not visible enough.</p></article>
-            <article class="card"><h3>Strategy Next Steps</h3><p>Get clarity on what to strengthen before rewriting documents.</p></article>
-          </div>
-          <div class="disclaimer-box">This assessment provides clarity, not execution. It does not rewrite resumes, optimize for specific job postings, guarantee results, or replace professional judgment.</div>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://chatgpt.com/g/g-69837c187f908191bc90bdf0c90849b5-career-positioning-diagnostic-by-hire-me-now" target="_blank" rel="noopener noreferrer">Start Free Assessment</a>
+      <section id="free-assessment" class="bg-white py-20 sm:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="fade-in rounded-3xl bg-gradient-to-br from-white via-warmgray to-accent/35 p-8 shadow-soft sm:p-10">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-teal">Free Career Tool</p>
+            <h2 class="mt-2 font-serif text-3xl text-navy sm:text-4xl">Free Resume Positioning Assessment</h2>
+            <p class="mt-4 text-lg">Upload or paste your resume and receive a consultation-style review of how your experience may be interpreted by Canadian employers.</p>
+            <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+              <div class="rounded-xl bg-white p-4 shadow-sm"><h3 class="font-semibold text-navy">Recruiter Interpretation</h3></div>
+              <div class="rounded-xl bg-white p-4 shadow-sm"><h3 class="font-semibold text-navy">Positioning Gaps</h3></div>
+              <div class="rounded-xl bg-white p-4 shadow-sm"><h3 class="font-semibold text-navy">Achievement Clarity</h3></div>
+              <div class="rounded-xl bg-white p-4 shadow-sm"><h3 class="font-semibold text-navy">Strategy Next Steps</h3></div>
+            </div>
+            <p class="mt-6 rounded-lg border-l-4 border-amber-400 bg-white px-4 py-3 text-sm">This assessment provides clarity, not execution. It does not rewrite resumes, guarantee results, or replace professional judgment.</p>
+            <a href="https://chatgpt.com/g/g-69837c187f908191bc90bdf0c90849b5-career-positioning-diagnostic-by-hire-me-now" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex rounded-full bg-navy px-6 py-3 font-semibold text-white shadow-soft transition hover:-translate-y-0.5">Start Free Assessment</a>
           </div>
         </div>
       </section>
 
-      <section class="section section-midnight">
-        <div class="container">
-          <h2>Strong experience does not always lead to interviews.</h2>
-          <div class="problem-grid">
-            <article class="card"><h3>Your resume sounds too general</h3><p>Employers may not quickly understand your level, fit, or direction.</p></article>
-            <article class="card"><h3>Your achievements are buried</h3><p>Strong work can look ordinary if results and scope are hidden.</p></article>
-            <article class="card"><h3>Your career story is not focused</h3><p>Without clear direction, employers may be unsure where you fit.</p></article>
-            <article class="card"><h3>Your Canadian market fit is unclear</h3><p>Hiring teams expect relevance, clarity, and role alignment.</p></article>
+      <section class="py-20" id="resources">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div class="fade-in">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-teal">Method</p>
+            <h2 class="mt-2 font-serif text-3xl text-navy sm:text-4xl">Yulia Careers Method</h2>
+            <div class="mt-8 border-l-2 border-slate-200 pl-5">
+              <div class="mb-6"><h3 class="font-serif text-2xl text-navy">Diagnose</h3><p>Review your current resume, strengths, gaps, and career direction.</p></div>
+              <div class="mb-6"><h3 class="font-serif text-2xl text-navy">Position</h3><p>Clarify your target roles, value proposition, and strongest selling points.</p></div>
+              <div class="mb-6"><h3 class="font-serif text-2xl text-navy">Build</h3><p>Create stronger resume, LinkedIn, cover letter, and interview messaging.</p></div>
+              <div><h3 class="font-serif text-2xl text-navy">Execute</h3><p>Support applications, networking, interview preparation, and next steps.</p></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container">
-          <h2>The Yulia Careers Method</h2>
-          <div class="timeline-track">
-            <article><h3>1. Diagnose</h3><p>Review your current resume, strengths, gaps, and career direction.</p></article>
-            <article><h3>2. Position</h3><p>Clarify your target roles, value proposition, and strongest selling points.</p></article>
-            <article><h3>3. Build</h3><p>Create stronger resume, LinkedIn, cover letter, and interview messaging.</p></article>
-            <article><h3>4. Execute</h3><p>Support applications, networking, interview preparation, and next steps.</p></article>
+      <section class="bg-navy py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="font-serif text-3xl text-white sm:text-4xl">Common Resume Challenges</h2>
+          <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div class="rounded-xl bg-cream p-5">Too general</div>
+            <div class="rounded-xl bg-cream p-5">Achievements hidden</div>
+            <div class="rounded-xl bg-cream p-5">Career story unclear</div>
+            <div class="rounded-xl bg-cream p-5">Canadian market fit unclear</div>
+            <div class="rounded-xl bg-cream p-5">No clear target direction</div>
           </div>
         </div>
       </section>
 
-      <section class="section section-cream">
-        <div class="container">
-          <h2>Choose the level of support that fits your next step.</h2>
-          <div class="pricing-rail">
-            <article class="card service-card">
-              <h3>Resume Diagnostic</h3>
-              <p class="price">$120–$180</p>
+      <section id="services" class="bg-white py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="font-serif text-3xl text-navy sm:text-4xl">Career Services</h2>
+          <div class="mt-8 grid gap-5 lg:grid-cols-3">
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+              <h3 class="font-serif text-2xl text-navy">Diagnostic</h3><p class="text-2xl font-bold text-navy">$120–$180</p>
               <p><strong>Best for:</strong> clarity before rewriting.</p>
-              <p class="service-meta"><strong>What you receive:</strong> resume review + positioning feedback.</p>
-              <p class="service-meta"><strong>Timeline:</strong> typically completed within 3–5 business days.</p>
-              <a class="btn btn-secondary" href="contact.html">Choose Diagnostic</a>
+              <p><strong>What you receive:</strong> review + positioning notes.</p>
+              <p><strong>Timeline:</strong> 3–5 business days.</p>
+              <a href="contact.html" class="mt-4 inline-flex rounded-full border border-slate-300 px-5 py-2.5 font-semibold text-navy">Choose Diagnostic</a>
             </article>
-            <article class="card service-card popular">
-              <span class="popular-label">Most Popular</span>
-              <h3>Strategy Package</h3>
-              <p class="price">$300–$500</p>
+            <article class="relative rounded-2xl border-2 border-teal bg-warmgray p-6 shadow-soft">
+              <span class="absolute -top-3 right-4 rounded-full bg-teal px-3 py-1 text-xs font-bold text-white">Most Popular</span>
+              <h3 class="font-serif text-2xl text-navy">Strategy Package</h3><p class="text-2xl font-bold text-navy">$300–$500</p>
               <p><strong>Best for:</strong> resume, LinkedIn, and positioning strategy.</p>
-              <p class="service-meta"><strong>What you receive:</strong> strategy-first guidance + document direction.</p>
-              <p class="service-meta"><strong>Timeline:</strong> typically 1–2 weeks depending on scope.</p>
-              <a class="btn btn-primary" href="contact.html">Choose Strategy</a>
+              <p><strong>What you receive:</strong> strategy roadmap + document direction.</p>
+              <p><strong>Timeline:</strong> 1–2 weeks.</p>
+              <a href="contact.html" class="mt-4 inline-flex rounded-full bg-navy px-5 py-2.5 font-semibold text-white">Choose Strategy Package</a>
             </article>
-            <article class="card service-card">
-              <h3>Complete Support</h3>
-              <p class="price">$600–$1,200</p>
+            <article class="rounded-2xl border border-slate-200 bg-white p-6 shadow-soft">
+              <h3 class="font-serif text-2xl text-navy">Complete Support</h3><p class="text-2xl font-bold text-navy">$600–$1,200</p>
               <p><strong>Best for:</strong> full job search support and interview preparation.</p>
-              <p class="service-meta"><strong>What you receive:</strong> end-to-end coaching and messaging support.</p>
-              <p class="service-meta"><strong>Timeline:</strong> multi-session support based on needs.</p>
-              <a class="btn btn-secondary" href="contact.html">Choose Complete Support</a>
+              <p><strong>What you receive:</strong> end-to-end coaching support.</p>
+              <p><strong>Timeline:</strong> multi-session support.</p>
+              <a href="contact.html" class="mt-4 inline-flex rounded-full border border-slate-300 px-5 py-2.5 font-semibold text-navy">Choose Complete Support</a>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container narrow">
-          <h2>Career strategy led by human judgment, not templates.</h2>
-          <p class="lead">Yulia Cher is a Certified Resume Strategist with 15+ years of Canadian employment and career services experience. She helps clients understand what their resume is really communicating and how to position their experience for the Canadian job market.</p>
-          <div class="cred-grid">
-            <article class="card"><h3>Strategy before documents</h3></article>
-            <article class="card"><h3>Canadian market insight</h3></article>
-            <article class="card"><h3>Practical execution support</h3></article>
-            <article class="card"><h3>Clear, honest feedback</h3></article>
+      <section id="about" class="bg-warmgray py-20">
+        <div class="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+          <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="aspect-[4/3] rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 p-4 text-sm text-slate-500" role="img" aria-label="Professional photo placeholder for Yulia Cher">
+              Professional photo placeholder
+            </div>
+          </div>
+          <div>
+            <h2 class="font-serif text-3xl text-navy sm:text-4xl">About Yulia Cher</h2>
+            <p class="mt-4">Yulia Cher is a Certified Resume Strategist with 15+ years of Canadian employment and career services experience. She helps clients understand what their resume is really communicating and how to position their experience for the Canadian job market.</p>
           </div>
         </div>
       </section>
 
-      <section class="section section-cream">
-        <div class="container">
-          <h2>Who This Supports</h2>
-          <div class="tags">
-            <span class="tag">Newcomers to Canada</span>
-            <span class="tag">International students</span>
-            <span class="tag">Career changers</span>
-            <span class="tag">Experienced professionals</span>
-            <span class="tag">Job seekers not getting interviews</span>
-            <span class="tag">Parents seeking teen career guidance</span>
-            <span class="tag">Professionals returning to work</span>
+      <section class="py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="font-serif text-3xl text-navy sm:text-4xl">Who We Support</h2>
+          <div class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="rounded-full border border-slate-200 bg-white px-5 py-3">Newcomers to Canada</div>
+            <div class="rounded-full border border-slate-200 bg-white px-5 py-3">International professionals</div>
+            <div class="rounded-full border border-slate-200 bg-white px-5 py-3">International students</div>
+            <div class="rounded-full border border-slate-200 bg-white px-5 py-3">Recent graduates</div>
+            <div class="rounded-full border border-slate-200 bg-white px-5 py-3">Career changers</div>
+            <div class="rounded-full border border-slate-200 bg-white px-5 py-3">Experienced professionals</div>
+            <div class="rounded-full border border-slate-200 bg-white px-5 py-3">Parents supporting teens</div>
+            <div class="rounded-full border border-slate-200 bg-white px-5 py-3">Professionals returning to work</div>
           </div>
         </div>
       </section>
 
-      <section class="section faq">
-        <div class="container narrow">
-          <h2>Frequently Asked Questions</h2>
-          <div class="grid">
-            <details><summary>What is Yulia Careers?</summary><p>Yulia Careers is a founder-led career strategy service focused on resume positioning, interview readiness, and practical job search support for Canada.</p></details>
-            <details><summary>Who is this service for?</summary><p>Support is designed for newcomers, students, career changers, and experienced professionals who need clearer positioning.</p></details>
-            <details><summary>Do you offer resume writing in Toronto?</summary><p>Yes. Toronto clients are supported, along with remote clients across Canada.</p></details>
-            <details><summary>Do you work remotely across Canada?</summary><p>Yes. Consultations and support can be delivered online nationwide.</p></details>
-            <details><summary>Do you help newcomers to Canada?</summary><p>Yes. Newcomer support is a core focus, especially for Canadian market fit and messaging.</p></details>
-            <details><summary>What happens after I contact you?</summary><p>You receive a response to discuss goals, service fit, and practical next steps.</p></details>
+      <section class="bg-cream py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <h2 class="font-serif text-3xl text-navy sm:text-4xl">Client feedback</h2>
+          <div class="mt-8 grid gap-4 md:grid-cols-3">
+            <div class="rounded-xl border border-slate-200 bg-white p-5">Replace with real client quote.</div>
+            <div class="rounded-xl border border-slate-200 bg-white p-5">Replace with real client quote.</div>
+            <div class="rounded-xl border border-slate-200 bg-white p-5">Replace with real client quote.</div>
           </div>
         </div>
       </section>
 
-      <section class="section section-cta">
-        <div class="container narrow">
-          <h2>Ready to understand what your resume is really communicating?</h2>
-          <p>Start with the free assessment or book a consultation for deeper support.</p>
-          <div class="cta-row">
-            <a class="btn btn-primary" href="https://chatgpt.com/g/g-69837c187f908191bc90bdf0c90849b5-career-positioning-diagnostic-by-hire-me-now" target="_blank" rel="noopener noreferrer">Start Free Assessment</a>
-            <a class="btn btn-secondary" href="INSERT_CALENDLY_LINK_HERE">Book a Free Call</a>
+      <section class="py-20">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 class="font-serif text-3xl text-navy sm:text-4xl">FAQ</h2>
+          <div class="mt-6 space-y-3">
+            <details class="rounded-xl border border-slate-200 bg-white p-4"><summary class="cursor-pointer font-semibold text-navy">What is Yulia Careers?</summary><p class="mt-2">Yulia Careers is a founder-led career strategy service focused on practical, Canadian-market resume and positioning support.</p></details>
+            <details class="rounded-xl border border-slate-200 bg-white p-4"><summary class="cursor-pointer font-semibold text-navy">Who is this service for?</summary><p class="mt-2">Newcomers, professionals, students, career changers, and families seeking strategic guidance.</p></details>
+            <details class="rounded-xl border border-slate-200 bg-white p-4"><summary class="cursor-pointer font-semibold text-navy">Do you offer resume writing in Toronto?</summary><p class="mt-2">Yes, including Toronto support and remote service across Canada.</p></details>
+            <details class="rounded-xl border border-slate-200 bg-white p-4"><summary class="cursor-pointer font-semibold text-navy">Do you work remotely across Canada?</summary><p class="mt-2">Yes, remote consultations are available nationwide.</p></details>
+            <details class="rounded-xl border border-slate-200 bg-white p-4"><summary class="cursor-pointer font-semibold text-navy">Do you help newcomers to Canada?</summary><p class="mt-2">Yes, newcomer positioning support is a core focus.</p></details>
+            <details class="rounded-xl border border-slate-200 bg-white p-4"><summary class="cursor-pointer font-semibold text-navy">What happens after I contact you?</summary><p class="mt-2">You receive a response to clarify your goals and choose a practical next step.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-navy py-20 text-white">
+        <div class="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 class="font-serif text-3xl sm:text-4xl">Ready to understand what your resume is really communicating?</h2>
+          <div class="mt-7 flex flex-wrap justify-center gap-3">
+            <a href="https://chatgpt.com/g/g-69837c187f908191bc90bdf0c90849b5-career-positioning-diagnostic-by-hire-me-now" target="_blank" rel="noopener noreferrer" class="rounded-full bg-white px-6 py-3 font-semibold text-navy">Start Free Assessment</a>
+            <a href="mailto:hire.me.now.resumes@gmail.com?subject=Discovery%20Call%20Request" class="rounded-full border border-white/40 px-6 py-3 font-semibold">Book a Discovery Call</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="container">
-        <p><strong>Yulia Careers</strong></p>
-        <p>Canadian Resume Strategy &amp; Career Positioning</p>
-        <p><a href="mailto:hire.me.now.resumes@gmail.com">hire.me.now.resumes@gmail.com</a> · <a href="https://www.facebook.com/hire.me.now.resumes/" target="_blank" rel="noopener noreferrer">Facebook</a></p>
-        <p>Copyright 2026 Yulia Careers</p>
+    <footer class="bg-slate-950 py-10 text-slate-200">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <p class="font-serif text-xl text-white">Yulia Careers</p>
+        <p>Toronto-based, remote across Canada</p>
+        <p>Email: <a class="underline" href="mailto:hire.me.now.resumes@gmail.com">hire.me.now.resumes@gmail.com</a></p>
+        <p>Facebook: <a class="underline" href="https://www.facebook.com/hire.me.now.resumes/" target="_blank" rel="noopener noreferrer">https://www.facebook.com/hire.me.now.resumes/</a></p>
       </div>
     </footer>
+
+    <a id="floatingAssessment" href="https://chatgpt.com/g/g-69837c187f908191bc90bdf0c90849b5-career-positioning-diagnostic-by-hire-me-now" target="_blank" rel="noopener noreferrer" class="fixed bottom-5 right-5 z-40 hidden rounded-full bg-teal px-5 py-3 text-sm font-semibold text-white shadow-soft">Free Assessment</a>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuBtn.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.toggle('hidden') === false;
+        menuBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.querySelectorAll('#mobileMenu a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('show');
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+      const floating = document.getElementById('floatingAssessment');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 700) floating.classList.remove('hidden');
+        else floating.classList.add('hidden');
+      });
+    </script>
   </body>
 </html>
