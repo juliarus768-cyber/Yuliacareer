@@ -1,70 +1,22 @@
-:root { font-family: Inter, system-ui, sans-serif; color: #edf2ff; background: #04030e; }
+:root { font-family: Inter, system-ui, sans-serif; color: #edf2ff; background: #05070f; }
 * { box-sizing: border-box; }
-body {
-  margin: 0;
-  background: radial-gradient(circle at 15% 10%, #2d3fc8 0, transparent 35%),
-              radial-gradient(circle at 85% 20%, #c62b8f 0, transparent 30%),
-              linear-gradient(180deg, #0a0f27, #04030e 65%);
-}
-.app { padding: 1rem; max-width: 1250px; margin: 0 auto; }
-header h1 { margin: 0 0 .8rem; text-align: center; color: #9fe0ff; text-shadow: 0 0 16px #3e9fff99; }
+body { margin: 0; background: radial-gradient(circle at top, #121a3f, #05070f 55%); }
+.app { padding: 1rem; max-width: 1200px; margin: 0 auto; }
+header h1 { margin: 0 0 .8rem; text-align: center; color: #8dd3ff; }
 .controls { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: .5rem; }
-button {
-  border: 0; background: linear-gradient(135deg, #1e2d78, #7127a8); color: #fff; border-radius: 14px;
-  padding: .7rem; font-size: .92rem; font-weight: 700; box-shadow: 0 8px 20px #00000055;
-}
-button:hover { filter: brightness(1.1); }
-button.active { outline: 2px solid #76f3ff; background: linear-gradient(135deg, #2f45c2, #ff4ea0); }
-button.mode { background: linear-gradient(135deg, #13a5ff, #6a4bff); }
-.grid { display: grid; gap: .9rem; margin-top: 1rem; }
-.grid.two { grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); }
-.grid.three { grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); }
-.card {
-  background: rgba(12, 16, 44, .9); border: 1px solid #4f5fb8; border-radius: 18px; padding: 1rem;
-  box-shadow: inset 0 0 0 1px #ffffff1f, 0 0 26px #00000050;
-}
-.card.blue { border-color: #2d95ff; box-shadow: inset 0 0 0 1px #7ed1ff6f, 0 0 28px #2d95ff47; }
-.card.pink { border-color: #ff4d9a; box-shadow: inset 0 0 0 1px #ff9ad16f, 0 0 28px #ff4d9a47; }
-.avatar-card { display: grid; grid-template-columns: 120px 1fr; gap: .8rem; align-items: center; margin-bottom: .6rem; }
-.avatar-illustration {
-  width: 120px; height: 140px; border-radius: 16px; padding-top: 6px; position: relative;
-  background: linear-gradient(160deg, #162264, #30134e); border: 2px solid #89cdff;
-}
-.avatar-illustration.pink { background: linear-gradient(160deg, #48153d, #271451); border-color: #ff88cb; }
-.hair { width: 75px; height: 40px; background: #ffd45e; margin: 6px auto 0; border-radius: 40px 40px 20px 20px; }
-.face { width: 70px; height: 65px; background: #ffd8c2; margin: -6px auto 0; border-radius: 35px; position: relative; padding-top: 18px; text-align: center; }
-.eye { width: 10px; height: 10px; background: #31a4ff; border-radius: 50%; display: inline-block; margin: 0 8px; }
-.braces { display: block; color: #f3f3f3; font-size: .7rem; margin-top: 10px; letter-spacing: 1px; }
-.outfit { width: 90px; height: 38px; background: linear-gradient(180deg, #2a62ff, #13215e); border-radius: 12px; margin: 6px auto 0; }
-.avatar-illustration.pink .outfit { background: linear-gradient(180deg, #ff4a9a, #7a2259); }
-.prop { text-align: center; font-size: .9rem; margin-top: 3px; }
-.tagline { margin: .2rem 0 0; color: #b7d9ff; }
-.row { display: flex; gap: .55rem; flex-wrap: wrap; margin: .45rem 0; }
-.badge { display: inline-block; padding: .3rem .55rem; border-radius: 999px; margin-right: .35rem; font-weight: 700; }
-.badge.coin { background: #ffdb64; color: #422600; }
-.badge.streak { background: #ff7b59; color: #fff; }
-.xp-wrap { height: 12px; background: #1d2457; border-radius: 999px; overflow: hidden; margin: .45rem 0; }
-.xp-bar { height: 100%; background: linear-gradient(90deg, #36e1ff, #5eff9f); box-shadow: 0 0 12px #5eff9f8c; }
-.mission-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); gap: .55rem; }
-.mission-card { background: linear-gradient(140deg, #232a6b, #57296a); border: 1px solid #728cff; border-radius: 12px; padding: .55rem; }
-.reward { background: linear-gradient(155deg, #172557, #4a1956); }
-.coin-tag { font-weight: 800; color: #ffd261; }
-.mystery-box {
-  display: inline-block; padding: .65rem 1rem; border-radius: 12px; font-weight: 900;
-  background: linear-gradient(135deg, #ff4f9f, #7e36ff); box-shadow: 0 0 20px #ff66bb88;
-  animation: pulse 1.7s infinite ease-in-out;
-}
-@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-.parent-row { background: #1b1f49; border: 1px solid #475cce; border-radius: 12px; padding: .6rem; margin: .55rem 0; }
-.overview { background: linear-gradient(165deg, #20345f, #54235c); }
+button { border: 1px solid #3c4e96; background: #131b42; color: #fff; border-radius: 12px; padding: .65rem; font-size: .92rem; }
+button.active { outline: 2px solid #55d2ff; }
+.grid { display: grid; gap: .8rem; margin-top: 1rem; }
+.grid.two { grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); }
+.grid.three { grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); }
+.card { background: rgba(13, 19, 44, .88); border: 1px solid #38488f; border-radius: 16px; padding: .9rem; box-shadow: 0 0 20px #00000066; }
+.card.blue { border-color: #3da6ff; box-shadow: 0 0 24px #1557c955; }
+.card.pink { border-color: #ff4f91; box-shadow: 0 0 24px #b2166555; }
+.row { display: flex; gap: .5rem; flex-wrap: wrap; margin: .4rem 0; }
 .dots { display: flex; gap: .35rem; flex-wrap: wrap; margin: .5rem 0; }
-.dot { width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .75rem; font-weight: 700; }
+.dot { width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: .75rem; }
 .dot.s3 { background: #48e8a1; color: #022d19; }
 .dot.s2 { background: #ffc947; color: #3a2600; }
 .dot.s1 { background: #ff6d9b; color: #420016; }
-footer { margin: 1rem 0; text-align: center; color: #d4deff; font-size: .85rem; }
-@media (max-width: 640px) {
-  .avatar-card { grid-template-columns: 1fr; }
-  .avatar-illustration { margin: 0 auto; }
-}
-@media (min-width: 768px) { button { min-height: 52px; font-size: 1rem; } }
+footer { margin: 1rem 0; text-align: center; color: #aac1ff; font-size: .85rem; }
+@media (min-width: 768px) { button { min-height: 50px; font-size: 1rem; } .card { padding: 1rem 1.1rem; } }
