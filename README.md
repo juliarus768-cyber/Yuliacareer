@@ -1,35 +1,30 @@
-# Yulia Careers Website
+# Summer Math Battle Tutor (V1)
 
-This repository contains the static GitHub Pages website for **Yulia Careers**.
+Tablet-friendly React + Vite app to support Alex (Grade 7) and Katya (Grade 4) with summer math missions, battle mode, money lab, rewards, and parent reporting.
 
-## Project Purpose
+## Run locally
 
-The site is a lead-generation website for:
-- Canadian resume writing and strategy
-- Career positioning support
-- LinkedIn and job search coaching
-- Interview preparation
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start dev server:
+   ```bash
+   npm run dev
+   ```
+3. Open the local URL shown by Vite (typically `http://localhost:5173`).
 
-## Deployment
+## Build for production
 
-- Platform: GitHub Pages
-- Main file: `index.html`
-- Planned custom domain: `YuliaCareers.ca`
+```bash
+npm run build
+npm run preview
+```
 
-## Lead Magnet
+## What to test first
 
-The primary lead magnet is the **Free Resume Positioning Assessment**:
-
-- https://chatgpt.com/g/g-69837c187f908191bc90bdf0c90849b5-career-positioning-diagnostic-by-hire-me-now
-
-## Site Files
-
-- `index.html` - homepage with hero, free assessment, method, audience, FAQ, CTA
-- `about.html` - founder and approach page
-- `services.html` - service packages and pricing ranges
-- `contact.html` - contact options + Formspree-ready form
-- `404.html` - custom not-found page
-- `style.css` - shared styling for all pages
-- `script.js` - mobile navigation toggle
-- `sitemap.xml` - search engine sitemap
-- `robots.txt` - crawler directives
+1. Home Dashboard cards for Alex and Katya update when `+ Complete Mission` is clicked.
+2. Switch `Mode: Weekday/Weekend` and verify mission duration and daily goals change.
+3. Reward Store requests appear in Parent Dashboard and remain after refresh (localStorage).
+4. Math Facts Trainer mastery dots render from 1–12 for both children.
+5. Battle Mode text confirms balanced scoring and Alex’s “Check Before Submit” bonus.
